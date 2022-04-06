@@ -103,9 +103,6 @@ class MyPage extends Component<Props> {
                     <Text style={styles.groupTitle}>Setting</Text>
                     {/*Custom_Theme*/}
                     {this.getItem(MORE_MENU.Custom_Theme)}
-                    {/*about the creator*/}
-                    {/* <View style={GlobalStyles.line}/> */}
-                    {/* {this.getItem(MORE_MENU.About_Author)} */}
                     <View style={GlobalStyles.line}/>
                     {/* code push */}
                     <View style={GlobalStyles.line}/>
