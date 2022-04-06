@@ -79,34 +79,7 @@ class MyPage extends Component<Props> {
         return (
             <View style={GlobalStyles.root_container}>
                 {navigationBar}
-                {/* 不行的话就把下面这些删掉 */}
                 <ScrollView>
-                    {/* <TouchableOpacity
-                        style={styles.item}
-                        onPress={() => this.onClick(MORE_MENU.About)}
-                    >
-                        <View style={styles.about_left}>
-                            <Ionicons
-                                name={MORE_MENU.About.icon}
-                                size={40}
-                                style={{
-                                    marginRight: 10,
-                                    color: theme.themeColor,
-                                }}
-                            />
-                            <Text>GitHub Advanced</Text>
-                        </View>
-                        <Ionicons
-                            name={'ios-arrow-forward'}
-                            size={16}
-                            style={{
-                                marginRight: 10,
-                                alignSelf: 'center',
-                                color: theme.themeColor,
-                            }}/>
-                    </TouchableOpacity> */}
-                    {/* <View style={GlobalStyles.line}/>
-                    {this.getItem(MORE_MENU.Tutorial)} */}
                     {/*Trending management*/}
                     <Text style={styles.groupTitle}>Trending management</Text>
                     {/*custom language*/}
@@ -130,9 +103,6 @@ class MyPage extends Component<Props> {
                     <Text style={styles.groupTitle}>Setting</Text>
                     {/*Custom_Theme*/}
                     {this.getItem(MORE_MENU.Custom_Theme)}
-                    {/*about the creator*/}
-                    {/* <View style={GlobalStyles.line}/> */}
-                    {/* {this.getItem(MORE_MENU.About_Author)} */}
                     <View style={GlobalStyles.line}/>
                     {/* code push */}
                     <View style={GlobalStyles.line}/>
