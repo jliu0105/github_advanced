@@ -1,0 +1,6 @@
+module Pods_GitHub_RN_GitHub_RNTests {
+  umbrella header "Pods-GitHub_RN-GitHub_RNTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

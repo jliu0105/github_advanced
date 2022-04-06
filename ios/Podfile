@@ -1,0 +1,61 @@
+require_relative '../node_modules/react-native/scripts/react_native_pods'
+require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+
+platform :ios, '10.0'
+
+target 'GitHub_RN' do
+
+# Umeng公共基础
+    pod 'UMCCommon'
+#    pod 'UMCSecurityPlugins'
+    pod 'UMCCommonLog'
+
+    # 统计
+   # pod 'UMCAnalytics'
+
+    # 分享与登录
+    # U-Share SDK UI模块（分享面板，建议添加）
+    pod 'UMCShare/UI'
+
+    # 集成微信(精简版0.2M)
+    pod 'UMCShare/Social/ReducedWeChat'
+
+    # 集成QQ/QZone/TIM(精简版0.5M)
+    pod 'UMCShare/Social/ReducedQQ'
+
+    # 集成新浪微博(精简版1M)
+    pod 'UMCShare/Social/ReducedSina'
+
+    # 集成邮件
+    pod 'UMCShare/Social/Email'
+
+    # 集成短信
+    pod 'UMCShare/Social/SMS'
+
+  config = use_native_modules!
+
+  use_react_native!(:path => config["reactNativePath"])
+
+  target 'GitHub_RNTests' do
+    inherit! :complete
+    # Pods for testing
+  end
+
+  # Enables Flipper.
+  #
+  # Note that if you have use_frameworks! enabled, Flipper will not work and
+  # you should disable these next few lines.
+  use_flipper!
+  post_install do |installer|
+    flipper_post_install(installer)
+  end
+end
+
+target 'GitHub_RN-tvOS' do
+  # Pods for GitHub_RN-tvOS
+
+  target 'GitHub_RN-tvOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+end
